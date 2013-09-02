@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCFirstViewController : UIViewController
+@interface FCNewsViewController : UIViewController
+<
+UITableViewDataSource,
+UITableViewDelegate
+>
+
+@property (nonatomic, strong) NSMutableArray *articles;
 
 @end
