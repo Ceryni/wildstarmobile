@@ -7,17 +7,28 @@
 //
 
 #import "FCNewsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface FCNewsViewController ()
-
+@interface FCNewsViewController (){
+    FCArticlePreviewService *articlePreviewService;
+}
+    
 @end
 
 @implementation FCNewsViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    articlePreviewService = [[FCArticlePreviewService alloc] init];
+    self.articles = [NSMutableArray array];
+    
+    self.tableView.separatorColor = [UIColor colorWithRed:244/255.0 green:212/255.0 blue:86/255.0 alpha:1.0];
+    [self.articles addObjectsFromArray:[articlePreviewService scanArticlePreviewsOn:1]];
+
+    NSLog(@"Loaded %d articles", self.articles.count);
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,11 +54,16 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ArticleThumbNailCell];
     
-    UILabel *articleHeader = (UILabel *)[cell viewWithTag:100];
-    UIImage *articleThumbnail = (UIImage *)[cell viewWithTag:101];
-    UILabel *articlePreview = (UILabel *)[cell viewWithTag:102];
+    UILabel *articleHeaderLabel = (UILabel *)[cell viewWithTag:100];
+    UIImageView *articleThumbnailImageView = (UIImageView *)[cell viewWithTag:101];
+    articleThumbnailImageView.layer.borderColor = [[UIColor blackColor] CGColor];
+    articleThumbnailImageView.layer.borderWidth = 2.0;
+    UILabel *articleSnippetLabel = (UILabel *)[cell viewWithTag:102];
     
-    
+    FCArticlePreview *aPreview = self.articles[indexPath.row];
+    articleHeaderLabel.text = aPreview.articleHeader;
+    articleThumbnailImageView.image = aPreview.articleThumbnail;
+    articleSnippetLabel.text = aPreview.articleSnippet;
     return cell;
     
 }

@@ -10,11 +10,11 @@
 
 @interface FCArticlePreview : NSObject
 
-@property (nonatomic, strong) NSString *articleHeader;
-@property (nonatomic, strong) UIImage *articleThumbnail;
-@property (nonatomic, strong) NSString *articleSnippet;
-@property (nonatomic, strong) NSURL *articleLink;
+@property (copy) NSString *articleHeader;
+@property (copy) UIImage *articleThumbnail;
+@property (copy) NSString *articleSnippet;
+@property (copy) NSString *articleLink;
 
 
-- (id)initWith:(NSString *)header :(UIImage *)thumbnail :(NSString *)snippet :(NSURL *)link;
+- (id)initWithHeader:(NSString *)header Thumbnail:(UIImage *)thumbnail Snippet:(NSString *)snippet Link:(NSString *)link;
 @end

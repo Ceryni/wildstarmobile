@@ -10,14 +10,14 @@
 
 @implementation FCArticlePreview
 
-- (id)initWith:(NSString *)header :(UIImage *)thumbnail :(NSString *)snippet :(NSURL *)link
+- (id)initWithHeader:(NSString *)header Thumbnail:(UIImage *)thumbnail Snippet:(NSString *)snippet Link:(NSString *)link
 {
     self = [super init];
     if(self){
-        self.articleHeader = header;
-        self.articleThumbnail = thumbnail;
-        self.articleSnippet = snippet;
-        self.articleLink = link;
+        _articleHeader = header;
+        _articleThumbnail = thumbnail;
+        _articleSnippet = snippet;
+        _articleLink = link;
     }
     return self;
 }
