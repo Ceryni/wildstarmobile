@@ -30,7 +30,8 @@
 		C4EB1E3717D574E900C63404 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1E3317D574E900C63404 /* TFHppleElement.m */; };
 		C4EB1E3817D574E900C63404 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1E3517D574E900C63404 /* XPathQuery.m */; };
 		C4EB1E3B17D5759200C63404 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EB1E3A17D5759200C63404 /* libxml2.dylib */; };
-		DB8BDD4E2FB749FF90EB8F1B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB5C637F7DC419A9432EF9B /* libPods.a */; };
+		C4EB1E3E17D6C92800C63404 /* FCArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1E3D17D6C92800C63404 /* FCArticleViewController.m */; };
+		C4EB1E4117D6CC6400C63404 /* FCExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB1E4017D6CC6400C63404 /* FCExampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5DB5C637F7DC419A9432EF9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C445725F17D3CA9C0093FAED /* WildstarMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildstarMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C445726217D3CA9C0093FAED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C445726417D3CA9C0093FAED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +80,10 @@
 		C4EB1E3417D574E900C63404 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		C4EB1E3517D574E900C63404 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		C4EB1E3A17D5759200C63404 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		E1613295888F4E6F9E8B9F35 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		C4EB1E3C17D6C92800C63404 /* FCArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCArticleViewController.h; sourceTree = "<group>"; };
+		C4EB1E3D17D6C92800C63404 /* FCArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCArticleViewController.m; sourceTree = "<group>"; };
+		C4EB1E3F17D6CC6400C63404 /* FCExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCExampleViewController.h; sourceTree = "<group>"; };
+		C4EB1E4017D6CC6400C63404 /* FCExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCExampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +95,6 @@
 				C445726317D3CA9C0093FAED /* UIKit.framework in Frameworks */,
 				C445726517D3CA9C0093FAED /* Foundation.framework in Frameworks */,
 				C445726717D3CA9C0093FAED /* CoreGraphics.framework in Frameworks */,
-				DB8BDD4E2FB749FF90EB8F1B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +118,6 @@
 				C445729717D3CA9C0093FAED /* WildstarMobileTests */,
 				C445726117D3CA9C0093FAED /* Frameworks */,
 				C445726017D3CA9C0093FAED /* Products */,
-				E1613295888F4E6F9E8B9F35 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,7 +137,6 @@
 				C445726417D3CA9C0093FAED /* Foundation.framework */,
 				C445726617D3CA9C0093FAED /* CoreGraphics.framework */,
 				C445729117D3CA9C0093FAED /* SenTestingKit.framework */,
-				5DB5C637F7DC419A9432EF9B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,6 +196,10 @@
 			children = (
 				C445727D17D3CA9C0093FAED /* FCNewsViewController.h */,
 				C445727E17D3CA9C0093FAED /* FCNewsViewController.m */,
+				C4EB1E3C17D6C92800C63404 /* FCArticleViewController.h */,
+				C4EB1E3D17D6C92800C63404 /* FCArticleViewController.m */,
+				C4EB1E3F17D6CC6400C63404 /* FCExampleViewController.h */,
+				C4EB1E4017D6CC6400C63404 /* FCExampleViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -247,11 +251,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C44572A217D3CA9C0093FAED /* Build configuration list for PBXNativeTarget "WildstarMobile" */;
 			buildPhases = (
-				03DFE656DA4E48648C2BF014 /* Check Pods Manifest.lock */,
 				C445725B17D3CA9C0093FAED /* Sources */,
 				C445725C17D3CA9C0093FAED /* Frameworks */,
 				C445725D17D3CA9C0093FAED /* Resources */,
-				503FD72AB2174799A6283785 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,36 +335,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03DFE656DA4E48648C2BF014 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		503FD72AB2174799A6283785 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C445728E17D3CA9C0093FAED /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +364,8 @@
 				C4EB1E3617D574E900C63404 /* TFHpple.m in Sources */,
 				C4EB1E3717D574E900C63404 /* TFHppleElement.m in Sources */,
 				C4EB1E3817D574E900C63404 /* XPathQuery.m in Sources */,
+				C4EB1E3E17D6C92800C63404 /* FCArticleViewController.m in Sources */,
+				C4EB1E4117D6CC6400C63404 /* FCExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +473,6 @@
 		};
 		C44572A317D3CA9C0093FAED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1613295888F4E6F9E8B9F35 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WildstarMobile/WildstarMobile-Prefix.pch";
@@ -513,6 +486,7 @@
 					"$(inherited)",
 					"$(FRANK_LIBRARY_SEARCH_PATHS)",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"$(FRANK_LDFLAGS)",
@@ -524,7 +498,6 @@
 		};
 		C44572A417D3CA9C0093FAED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1613295888F4E6F9E8B9F35 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WildstarMobile/WildstarMobile-Prefix.pch";
@@ -534,6 +507,7 @@
 					"\"$(SDKROOT)/usr/include/libxml2\"",
 				);
 				INFOPLIST_FILE = "WildstarMobile/WildstarMobile-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

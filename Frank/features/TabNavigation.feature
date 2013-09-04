@@ -4,9 +4,9 @@ Feature:
 Scenario:
 	User launches the app
 Given I launch the app
-Then I should see "First View"
+Then I should see "Mystery and Mayhem: A Tale from Beyond the Fringe!"
 
 Scenario:
-	User touches Info tab
-Given I touch "Info"
-Then I should see "Second View"
+	User touches Example Stuff tab
+Given I touch "Example Stuff"
+Then I should see "Change It"

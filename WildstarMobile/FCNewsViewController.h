@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FCArticlePreviewService.h"
+#import "FCArticleViewController.h"
 
 @interface FCNewsViewController : UIViewController
 <

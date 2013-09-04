@@ -25,10 +25,11 @@
     articlePreviewService = [[FCArticlePreviewService alloc] init];
     self.articles = [NSMutableArray array];
     
-    self.tableView.separatorColor = [UIColor colorWithRed:244/255.0 green:212/255.0 blue:86/255.0 alpha:1.0];
+    self.tableView.separatorColor = [UIColor colorWithRed:80/255.0 green:80/255.0 blue:80/255.0 alpha:1.0];
     [self.articles addObjectsFromArray:[articlePreviewService scanArticlePreviewsOn:1]];
-
+    
     NSLog(@"Loaded %d articles", self.articles.count);
+    NSLog(@"FCNewsViewController did Load");
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,10 +65,27 @@
     articleHeaderLabel.text = aPreview.articleHeader;
     articleThumbnailImageView.image = aPreview.articleThumbnail;
     articleSnippetLabel.text = aPreview.articleSnippet;
+        
     return cell;
     
 }
 
 #pragma mark - UITablewViewDelegate
+
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ThumbnailCellSelectSegue"]) {
+        NSIndexPath *selectedIndexPath = self.tableView.indexPathForSelectedRow;
+        FCArticlePreview *aPreview = self.articles[selectedIndexPath.row];
+        FCArticleViewController *articleViewController = segue.destinationViewController;
+        articleViewController.articleHeader = aPreview.articleHeader;
+        articleViewController.articleURL = aPreview.articleLink;
+        
+        [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
+    }
+}
 
 @end
